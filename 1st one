@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reliable Property Maintenance (R.P.M.)</title>
+
+<style>
+:root{
+--red:#D62828;
+--black:#000000;
+--white:#FFFFFF;
+--gray:#f4f4f4;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#fff;
+color:#000;
+line-height:1.6;
+}
+
+header{
+background:#000;
+color:#fff;
+padding:40px 20px;
+text-align:center;
+}
+
+.logo{
+width:180px;
+height:180px;
+border:10px solid white;
+border-radius:50%;
+margin:0 auto 20px;
+position:relative;
+}
+
+.logo::before{
+content:"";
+position:absolute;
+width:70px;
+height:6px;
+background:var(--red);
+top:65px;
+left:85px;
+transform:rotate(-35deg);
+transform-origin:left center;
+}
+
+.logo::after{
+content:"RPM";
+position:absolute;
+bottom:30px;
+left:50%;
+transform:translateX(-50%);
+font-size:30px;
+font-weight:bold;
+color:white;
+}
+
+h1{
+font-size:3rem;
+color:var(--red);
+}
+
+.tagline{
+font-size:1.3rem;
+margin-top:10px;
+}
+
+.btn{
+display:inline-block;
+background:var(--red);
+color:white;
+padding:15px 30px;
+margin-top:20px;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+}
+
+.section{
+padding:60px 10%;
+}
+
+.section-title{
+text-align:center;
+color:var(--red);
+margin-bottom:30px;
+font-size:2rem;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+border:1px solid #ddd;
+border-radius:10px;
+padding:20px;
+box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+.card h3{
+color:var(--red);
+margin-bottom:10px;
+}
+
+.card ul{
+padding-left:20px;
+}
+
+.pricing{
+background:var(--gray);
+}
+
+.booking{
+background:#111;
+color:white;
+}
+
+.booking form{
+max-width:800px;
+margin:auto;
+display:grid;
+gap:15px;
+}
+
+.booking input,
+.booking select,
+.booking textarea{
+padding:12px;
+border:none;
+border-radius:6px;
+}
+
+.booking button{
+background:var(--red);
+color:white;
+padding:15px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+font-size:16px;
+}
+
+.loyalty{
+background:#f8f8f8;
+}
+
+.footer{
+background:black;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+.policy{
+background:#fafafa;
+}
+
+.contact-box{
+text-align:center;
+font-size:18px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo"></div>
+
+<h1>Reliable Property Maintenance</h1>
+
+<p class="tagline">
+Your Property. Our Priority. Fast & Reliable.
+</p>
+
+#booking
+
+</header>
+
+<section class="section">
+<h2 class="section-title">About R.P.M.</h2>
+
+<p style="text-align:center;max-width:900px;margin:auto;">
+Reliable Property Maintenance provides professional lawn care,
+property maintenance, mini excavation, clean-outs, seasonal cleanups,
+and snow removal throughout the Greater Rochester Area.
+</p>
+</section>
+
+<section class="section">
+
+<h2 class="section-title">Our Services</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🌱 Lawn Care & Maintenance</h3>
+<ul>
+<li>Weekly Lawn Mowing</li>
+<li>Bi-Weekly Lawn Mowing</li>
+<li>Vacation Lawn Care</li>
+<li>Large Lot Mowing</li>
+<li>Overgrown Grass Cutting</li>
+</ul>
+<br>
+<strong>Residential:</strong> Set Pricing ($40-$60+)<br>
+<strong>Commercial:</strong> Custom Estimates
+</div>
+
+<div class="card">
+<h3>✂️ Trimming & Edging</h3>
+<ul>
+<li>Weed Whacking</li>
+<li>Fence Line Trimming</li>
+<li>Driveway & Sidewalk Edging</li>
+<li>Around Landscaping</li>
+</ul>
+<br>
+<strong>Residential:</strong> $20-$50+<br>
+<strong>Commercial:</strong> Custom Estimates
+</div>
+
+<div class="card">
+<h3>🌿 Brush & Overgrowth Removal</h3>
+<ul>
+<li>Property Line Clearing</li>
+<li>Trail Maintenance</li>
+<li>Field Edge Cleanup</li>
+<li>Brush Removal</li>
+<li>Shrub Removal</li>
+</ul>
+<br>
+<strong>Residential:</strong> $75-$300+<br>
+<strong>Commercial:</strong> Custom Estimates
+</div>
+
+<div class="card">
+<h3>🚜 Mini Excavation</h3>
+<ul>
+<li>Drainage Trenching</li>
+<li>Utility Trenches</li>
+<li>Post Hole Digging</li>
+<li>Stump Removal</li>
+<li>Grading & Leveling</li>
+<li>Garden & Pond Excavation</li>
+</ul>
+<br>
+<strong>Residential:</strong> $100/hr+<br>
+<strong>Commercial:</strong> Project Estimates
+</div>
+
+<div class="card">
+<h3>🏠 House & Apartment Clean-Outs</h3>
+<ul>
+<li>Estate Clean-Outs</li>
+<li>Foreclosure Clean-Outs</li>
+<li>Rental Turnovers</li>
+<li>Debris Removal</li>
+</ul>
+<br>
+<strong>Residential:</strong> Set Pricing<br>
+<strong>Commercial:</strong> Based on Number of Properties
+</div>
+
+<div class="card">
+<h3>🍂 Spring & Fall Cleanups</h3>
+<ul>
+<li>Leaf Cleanup</li>
+<li>Storm Debris Removal</li>
+<li>Fence Line Cleanup</li>
+<li>Property Preparation</li>
+</ul>
+<br>
+<strong>Residential:</strong> Set Pricing<br>
+<strong>Commercial:</strong> Multi-Property Estimates
+</div>
+
+<div class="card">
+<h3>❄️ Snow Removal</h3>
+<ul>
+<li>Driveways</li>
+<li>Small Commercial Lots</li>
+<li>Sidewalk Clearing</li>
+<li>Storm Cleanup</li>
+</ul>
+<br>
+<strong>Residential:</strong> $30-$100+<br>
+<strong>Commercial:</strong> Seasonal Contracts Available
+</div>
+
+</div>
+</section>
+
+<section class="section loyalty">
+
+<h2 class="section-title">⭐ RPM Rewards</h2>
+
+<div class="contact-box">
+1 Point for every $10 spent<br>
+10 Points for Reviews<br>
+25 Points for Referrals<br><br>
+
+25 Points = $10 Off<br>
+50 Points = Free Trimming Service<br>
+100 Points = $50 Credit
+</div>
+
+</section>
+
+<section id="booking" class="section booking">
+
+<h2 class="section-title">Book an Appointment</h2>
+
+<form>
+
+<input type="text" placeholder="Full Name" required>
+
+<input type="tel" placeholder="Phone Number" required>
+
+<input type="email" placeholder="Email Address">
+
+<input type="text" placeholder="Property Address">
+
+<select>
+<option>Select Service</option>
+<option>Lawn Maintenance</option>
+<option>Brush Removal</option>
+<option>Spring/Fall Cleanup</option>
+<option>Mini Excavation</option>
+<option>Snow Removal</option>
+<option>House Clean-Out</option>
+</select>
+
+<input type="date">
+
+<textarea rows="5" placeholder="Describe Your Project"></textarea>
+
+<button type="submit">
+Request Free Estimate
+</button>
+
+</form>
+
+</section>
+
+<section class="section policy">
+
+<h2 class="section-title">Cancellation & Rescheduling Policy</h2>
+
+<p>
+✅ Reschedule within 12 hours of booking at no charge (if service is not within 24 hours).
+</p>
+
+<p>
+✅ Lawn Care & Standard Services require 24-hour notice.
+</p>
+
+<p>
+✅ Excavation Services require 48-hour notice.
+</p>
+
+<p>
+✅ Weather-related delays are rescheduled free of charge.
+</p>
+
+<p>
+✅ Weekly and bi-weekly customers may place services on hold with 48-hour notice.
+</p>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">Contact Us</h2>
+
+<div class="contact-box">
+📍 Greater Rochester Area<br><br>
+
+📞 (Insert Phone Number)<br>
+
+📧 (Insert Email Address)<br><br>
+
+FREE ESTIMATES
+</div>
+
+</section>
+
+<footer class="footer">
+
+<h2>R.P.M.</h2>
+
+<p>Reliable Property Maintenance</p>
+
+<p>Your Property. Our Priority. Fast & Reliable.</p>
+
+<p>
+Lawn Care • Property Maintenance • Mini Excavation • Snow Removal
+</p>
+
+</footer>
+
+</body>
+</html>
