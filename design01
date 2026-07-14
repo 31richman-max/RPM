@@ -1,0 +1,405 @@
+rpm-website/
+│
+├── app/
+│   ├── page.tsx
+│   ├── layout.tsx
+│   └── globals.css
+│
+├── components/
+│   ├── Hero.tsx
+│   ├── RPMGauge.tsx
+│   ├── WeatherWidget.tsx
+│   ├── RewardsCard.tsx
+│   ├── Services.tsx
+│   ├── QuoteCalculator.tsx
+│   ├── BookingForm.tsx
+│   ├── Reviews.tsx
+│   └── BottomNav.tsx
+│
+├── public/
+│   ├── logo.png
+│   └── gallery/
+│
+└── package.json
+
+import Hero from "@/components/Hero";
+import WeatherWidget from "@/components/WeatherWidget";
+import Services from "@/components/Services";
+import BookingForm from "@/components/BookingForm";
+import RewardsCard from "@/components/RewardsCard";
+import QuoteCalculator from "@/components/QuoteCalculator";
+import BottomNav from "@/components/BottomNav";
+
+export default function Home() {
+  return (
+    <main className="bg-black text-white min-h-screen">
+
+      <Hero />
+
+      <section className="grid lg:grid-cols-4 gap-4 p-6">
+        <WeatherWidget />
+        <RewardsCard />
+        <QuoteCalculator />
+
+        <div className="bg-zinc-900 rounded-xl p-5">
+          <h2 className="text-xl font-bold mb-4">
+            Next Service
+          </h2>
+
+          <p>July 20, 2026</p>
+          <p>Weekly Lawn Service</p>
+
+          <span className="bg-green-600 px-2 py-1 rounded">
+            Scheduled
+          </span>
+        </div>
+      </section>
+
+      <Services />
+
+      <BookingForm />
+
+      <BottomNav />
+
+    </main>
+  );
+}
+
+export default function RPMGauge() {
+  return (
+    <div className="relative w-[450px] h-[450px] mx-auto">
+
+      <div className="
+       rounded-full
+       border-[12px]
+       border-gray-300
+       bg-gradient-to-b
+       from-zinc-800
+       to-black
+       shadow-2xl
+       w-full
+       h-full">
+
+        <div className="absolute inset-0 flex items-center justify-center">
+
+          <h1 className="
+          text-7xl
+          font-black
+          text-white
+          drop-shadow-lg">
+            R.P.M.
+          </h1>
+
+        </div>
+
+        <div
+          className="
+          absolute
+          left-1/2
+          top-1/2
+          w-40
+          h-2
+          bg-red-600
+          origin-left
+          rotate-[15deg]
+          shadow-red-600 shadow-lg"
+        />
+
+      </div>
+
+    </div>
+  );
+}
+
+import RPMGauge from "./RPMGauge";
+
+export default function Hero() {
+  return (
+    <section className="grid lg:grid-cols-2 items-center min-h-screen p-10">
+
+      <RPMGauge />
+
+      <div>
+
+        <h1 className="
+        text-6xl
+        font-black
+        uppercase
+        leading-tight">
+
+          Your Property.
+          <br />
+
+          Our Priority.
+          <br />
+
+          <span className="text-red-600">
+            Fast & Reliable.
+          </span>
+
+        </h1>
+
+        <p className="mt-6 text-xl text-zinc-300">
+
+          Lawn Care • Property Maintenance •
+          Mini Excavation • Clean-Outs •
+          Snow Removal
+
+        </p>
+
+        <div className="flex gap-4 mt-8">
+
+          <button className="
+          bg-red-600
+          px-8 py-4
+          rounded-lg font-bold">
+            Book Appointment
+          </button>
+
+          <button className="
+          border
+          border-white
+          px-8 py-4
+          rounded-lg">
+            Get Estimate
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+  );
+}
+
+import RPMGauge from "./RPMGauge";
+
+export default function Hero() {
+  return (
+    <section className="grid lg:grid-cols-2 items-center min-h-screen p-10">
+
+      <RPMGauge />
+
+      <div>
+
+        <h1 className="
+        text-6xl
+        font-black
+        uppercase
+        leading-tight">
+
+          Your Property.
+          <br />
+
+          Our Priority.
+          <br />
+
+          <span className="text-red-600">
+            Fast & Reliable.
+          </span>
+
+        </h1>
+
+        <p className="mt-6 text-xl text-zinc-300">
+
+          Lawn Care • Property Maintenance •
+          Mini Excavation • Clean-Outs •
+          Snow Removal
+
+        </p>
+
+        <div className="flex gap-4 mt-8">
+
+          <button className="
+          bg-red-600
+          px-8 py-4
+          rounded-lg font-bold">
+            Book Appointment
+          </button>
+
+          <button className="
+          border
+          border-white
+          px-8 py-4
+          rounded-lg">
+            Get Estimate
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+  );
+}
+
+export default function RewardsCard() {
+
+  return (
+    <div className="bg-white text-black rounded-xl p-5">
+
+      <h2 className="font-bold text-xl">
+        RPM Rewards
+      </h2>
+
+      <div className="
+      text-6xl
+      font-black
+      mt-4">
+        145
+      </div>
+
+      <p>Points</p>
+
+      <div className="
+      h-4
+      bg-gray-200
+      rounded
+      mt-4">
+
+        <div className="
+        h-4
+        bg-red-600
+        rounded
+        w-[65%]" />
+
+      </div>
+
+      <p className="mt-2">
+        55 points until VIP
+      </p>
+
+    </div>
+  );
+}
+
+const services = [
+  "Lawn Care",
+  "Trimming & Edging",
+  "Brush Removal",
+  "Mini Excavation",
+  "House Clean-Outs",
+  "Spring/Fall Cleanup",
+  "Snow Removal"
+];
+
+export default function Services() {
+  return (
+    <section className="py-16 px-8">
+
+      <h2 className="text-4xl font-bold mb-8">
+        Our Services
+      </h2>
+
+      <div className="
+      grid
+      md:grid-cols-2
+      lg:grid-cols-4
+      gap-5">
+
+        {services.map((item)=>(
+          <div
+            key={item}
+            className="
+            bg-zinc-900
+            border border-zinc-700
+            rounded-xl
+            p-5">
+            <h3 className="font-bold">
+              {item}
+            </h3>
+          </div>
+        ))}
+
+      </div>
+
+    </section>
+  )
+}
+
+export default function BookingForm() {
+
+ return (
+  <section
+   id="booking"
+   className="bg-zinc-950 p-10">
+
+   <h2 className="
+   text-4xl
+   font-bold
+   mb-8">
+    Book Appointment
+   </h2>
+
+   <form className="
+   grid
+   md:grid-cols-2
+   gap-4">
+
+    <input
+      placeholder="Full Name"
+      className="p-3 rounded text-black"
+    />
+
+    <input
+      placeholder="Phone Number"
+      className="p-3 rounded text-black"
+    />
+
+    <input
+      placeholder="Email"
+      className="p-3 rounded text-black"
+    />
+
+    <input
+      placeholder="Property Address"
+      className="p-3 rounded text-black"
+    />
+
+    <select
+      className="p-3 rounded text-black">
+
+      <option>Lawn Care</option>
+      <option>Mini Excavation</option>
+      <option>Property Cleanup</option>
+      <option>Snow Removal</option>
+
+    </select>
+
+    <input
+      type="date"
+      className="p-3 rounded text-black"
+    />
+
+    <textarea
+      rows={5}
+      placeholder="Describe work needed"
+      className="
+      p-3
+      rounded
+      text-black
+      md:col-span-2"
+    />
+
+    <button
+      className="
+      bg-red-600
+      py-4
+      rounded
+      font-bold
+      md:col-span-2">
+
+      Request Free Estimate
+
+    </button>
+
+   </form>
+
+  </section>
+ )
+}
+
+RPM Red: #D62828
+Black: #000000
+White: #FFFFFF
+Dark Gray: #111111
